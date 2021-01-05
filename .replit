@@ -1,0 +1,2 @@
+language = "java10"
+run = "javac Tester1.java; java Tester1"

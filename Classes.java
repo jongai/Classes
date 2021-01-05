@@ -16,19 +16,23 @@ public class Classes
 	//an ArrayList of students in the class, stores "Student" objects  
 	private ArrayList<Student> students; 
 
-	//the teacher's name 
-	private String teacherName; 
+	//the teacher of this class  
+	private Teacher teacher; 
 
-	//the teacher id for the teacher teaching this class 
-	private int teacherId; 
+  //no args constructor
+  public Classes()
+  {
+    className = ""; 
+    students = new ArrayList<Student>(); 
+    teacher = new Teacher(); 
+  }
 
 	//constructor which initializes all instance variables 
-	public Classes(String className, ArrayList<Student> students, String teacherName. int teacherId)
+	public Classes(String className, ArrayList<Student> students, Teacher teacher)
 	{
 		this.className = className; 
 		this.students = students; 
-		this.teacherName = teacherName; 
-		this.teacherId = teacherId; 
+		this.teacher = teacher; 
 	}
 
 	//mutator(setter) method for changing the name of the class 
@@ -41,30 +45,6 @@ public class Classes
 	public String getName()
 	{
 		return className; 
-	}
-
-	//mutator method for changing the name of the teacher 
-	public void setTeacher(String teacher) 
-	{
-		teacherName = teacher; 
-	}
-
-	//getter method for returning the teacher's name 
-	public String getTeacherName()
-	{
-		return teacherName; 
-	}
-
-	//mutator method for changing the teacher id 
-	public void setId(int id)
-	{
-		teacherId = id; 
-	}
-
-	//getter method for returning the teacher id 
-	public int getId()
-	{
-		return teacherId; 
 	}
 
 	//method for adding a student object to this class list 
@@ -100,7 +80,7 @@ public class Classes
 		int index = -1; 
 		for(int j = 0; j < students.size(); j++)
 		{
-			if(students[j].getId == studentId)
+			if(students[j].getStudentId == studentId)  
 			{
 				index = j;  
 			}
