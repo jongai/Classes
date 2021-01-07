@@ -1,11 +1,9 @@
-
 /**
  * Assignment class creates an object teacher information.
  *
  * @author Wes G, framework created by Jonathan Gai
  */
 import java.util.ArrayList;
-import java.util.Scanner;
 
 public class Teacher {
   private int id;
@@ -26,9 +24,7 @@ public class Teacher {
     this.contact = contact;
   }
 
-  /**
-   * No-arg contructor for Teacher class.
-   */
+  /** No-arg contructor for Teacher class. */
   public Teacher() {
     id = 0;
     name = "";
@@ -40,7 +36,9 @@ public class Teacher {
    *
    * @param name The teacher's name.
    */
-  public void setTeacherName(String name) { this.name = name; }
+  public void setTeacherName(String name) {
+    this.name = name;
+  }
 
   /**
    * Method to set the id of the teacher.
@@ -57,7 +55,7 @@ public class Teacher {
    * @param contact The teacher's contact information
    */
   public void setRawGrade(String contact) {
-   this.contact = contact;
+    this.contact = contact;
   }
 
   /**
@@ -65,48 +63,52 @@ public class Teacher {
    *
    * @return The teacher's name.
    */
-  public String getTeacherName() { return name; }
+  public String getTeacherName() {
+    return name;
+  }
 
   /**
    * Method to get the teacher's id.
    *
    * @return The teacher's id.
    */
-  public double getTeacherId() { return id; }
+  public double getTeacherId() {
+    return id;
+  }
 
   /**
    * Method to get the Teacher's contact.
    *
    * @return The teacher's contact.
    */
-  public String getTeacherContact() { return contact; }
-  
+  public String getTeacherContact() {
+    return contact;
+  }
+
   /**
    * Method to add a class
    *
    * @param The name of the class
    */
-  public void addClass(String className) {
-    teachClass.add(className);
+  public void addClass(Classes className) {
+    teachClasses.add(className);
   }
-  
+
   /**
    * Method to remove a class
    *
    * @param The name of the class
    */
-  public void removeClass(String className) {
-    teachClass.remove(className);
+  public void removeClass(Classes className) {
+    teachClasses.remove(className);
   }
 
-///////////////////////////////////////////////////
+  ///////////////////////////////////////////////////
 
-/* to do
- * fix remove class method
- * list classes
- * to string method
- * 
- */
- 
-  }
+  /* to do
+   * fix remove class method
+   * list classes
+   * to string method
+   *
+   */
 }

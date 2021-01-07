@@ -21,9 +21,7 @@ public class Assignment {
     this.totalPoints = totalPoints;
   }
 
-  /**
-   * No-arg contructor for Assignment class.
-   */
+  /** No-arg contructor for Assignment class. */
   public Assignment() {
     name = "";
     totalPoints = 100;
@@ -34,7 +32,9 @@ public class Assignment {
    *
    * @param name The assignment name.
    */
-  public void setAssignmentName(String name) { this.name = name; }
+  public void setAssignmentName(String name) {
+    this.name = name;
+  }
 
   /**
    * Method to set the total points of the assignment.
@@ -60,21 +60,25 @@ public class Assignment {
    *
    * @return The assignment name.
    */
-  public String getAssignmentName() { return name; }
+  public String getAssignmentName() {
+    return name;
+  }
 
   /**
    * Method to get the total points of the assignment.
    *
    * @return The total points of the assignment.
    */
-  public double getTotalPoints() { return totalPoints; }
+  public double getTotalPoints() {
+    return totalPoints;
+  }
 
   /**
    * Method to get the student's raw grade.
    *
    * @param studentID The student's ID.
    * @return double The student's raw grade.<br>
-   *         -1     if no raw grade found.
+   *     -1 if no raw grade found.
    */
   public double getRawGrade(int studentID) {
     Double grade = grades.get(studentID);
@@ -89,7 +93,7 @@ public class Assignment {
    *
    * @param studentID The student's ID.
    * @return double The student's grade out of 100.<br>
-   *         -1     if no grade found.
+   *     -1 if no grade found.
    */
   public double getPercentageGrade(int studentID) {
     Double grade = grades.get(studentID);
