@@ -17,18 +17,23 @@ public static void main(String[] args)
       System.out.print("Enter the id: ");
       int idStudent = scan.nextInt();
       scan.nextLine();
+      
       System.out.print("Enter the student's name: ");
       String nameStudent = scan.nextLine();
+
       System.out.print("Enter the home phone number, with the area code in parentheses, and with space between the area code and the number: ");
       String homePhone = scan.nextLine();
+
       System.out.print("Enter the name of the parent: ");
       String nameParent = scan.nextLine();
+
       System.out.print("Enter the last two digits of the student's graduating year: ");
-      int gradYear = scan.nextInt();
-      scan.nextInt();
+      int gradYear = scan.nextInt(); scan.nextLine();
+
       System.out.print("Provide the classes, seperated by commas:\n");
       String[] classesTaken = scan.nextLine().split(",");
-      Student s2 = new Student(idStudent, nameStudent, homePhone, nameParent, gradYear, classesTaken);
+
+      Student s2 =  new Student(idStudent, nameStudent, homePhone, nameParent, gradYear, classesTaken);
       arrL.add(s2);
       for(int j = 0; j < arrL.size(); j++)
       {

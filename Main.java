@@ -25,16 +25,50 @@ class Main {
     System.out.print("> ");
     switch (sc.nextLine()) {
       case "s":
-        menuStudents();
+        while (menuStudents()) {};
+        return true;
+      case "c":
+        while (menuClasses()) {};
+        return true;
+      case "g":
+        while (menuGrades()) {};
         return true;
       default:
         return false;
     }
   }
 
+  /**
+   * Displays the student list and prompts the user for what to display.
+   *
+   * @return Boolean value that keeps the loop running if True and stop if False.
+   */
   private static boolean menuStudents() {
     // Teacher objects need to be able to access teachClasses.
-    return true;
+    System.out.print("menuStudents filler text");
+    return false;
+  }
+
+  /**
+   * Displays the class list and prompts the user for what to display.
+   *
+   * @return Boolean value that keeps the loop running if True and stop if False.
+   */
+  private static boolean menuClasses() {
+    // Teacher objects need to be able to access teachClasses.
+    System.out.print("menuClasses filler text");
+    return false;
+  }
+
+  /**
+   * Displays the grade book and prompts the user for what to display.
+   *
+   * @return Boolean value that keeps the loop running if True and stop if False.
+   */
+  private static boolean menuGrades() {
+    // Teacher objects need to be able to access teachClasses.
+    System.out.print("menuGrades filler text");
+    return false;
   }
 
   public static void main(String[] args) {
@@ -43,6 +77,5 @@ class Main {
     while (menuResult) {
       menuResult = menu();
     }
-    ;
   }
 }

@@ -12,7 +12,7 @@ public class Classes {
   private String className;
 
   // an ArrayList of students in the class, stores "Student" objects
-  private ArrayList<Student> students;
+  private ArrayList<StudentGrades> studentgrades;
 
   // the teacher of this class
   private Teacher teacher;
@@ -20,14 +20,14 @@ public class Classes {
   // no args constructor
   public Classes() {
     className = "";
-    students = new ArrayList<Student>();
+    studentgrades = new ArrayList<StudentGrades>();
     teacher = new Teacher();
   }
 
   // constructor which initializes all instance variables
-  public Classes(String className, ArrayList<Student> students, Teacher teacher) {
+  public Classes(String className, ArrayList<StudentGrades> sgrades, Teacher teacher) {
     this.className = className;
-    this.students = students;
+    this.studentgrades = sgrades;
     this.teacher = teacher;
   }
 
@@ -41,9 +41,9 @@ public class Classes {
     return className;
   }
 
-  // method for adding a student object to this class list
-  public void add(Student s1) {
-    students.add(s1);
+  // method for adding a studentgrade object to this class list
+  public void add(StudentGrades s) {
+    studentgrades.add(s);
   }
 
   // method for removing a student object to this class list by inputting the
@@ -52,10 +52,10 @@ public class Classes {
     // loops through the list of students and finds the one with the
     // corresponding studentId and removes them
     int index = -1;
-    for (int j = 0; j < students.size(); j++) {
-      if (students.get(j).getStudentId() == studentId) {
+    for (int j = 0; j < studentgrades.size(); j++) {
+      if (studentgrades.get(j).getId() == studentId) {
         index = j;
-        students.remove(j);
+        studentgrades.remove(j);
       }
     }
 
@@ -70,8 +70,8 @@ public class Classes {
     // loops through the list of students and finds the one with the
     // corresponding studentId
     int index = -1;
-    for (int j = 0; j < students.size(); j++) {
-      if (students.get(j).getStudentId() == studentId) {
+    for (int j = 0; j < studentgrades.size(); j++) {
+      if (studentgrades.get(j).getId() == studentId) {
         index = j;
       }
     }
