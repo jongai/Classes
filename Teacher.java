@@ -103,11 +103,32 @@ public class Teacher {
     teachClasses.remove(className);
   }
 
+  /**
+   * Method to list classes
+   *
+   *
+   */
+   public void listClasses(){
+     for(var clas : teachClasses){ //we know we misspelled class, we just didn't have a better variable name
+       System.out.println(clas);
+     }
+   }
+   
+  /**
+   * Method to list all of the teacher's students
+   *
+   *
+   */
+   public void viewAllStudents(ArrayList<Student> slist){
+     for(var clas: teachClasses){
+       clas.printStudents(slist);//students may be printed multiple times
+     }
+   }
+
   ///////////////////////////////////////////////////
 
   /* to do
    * fix remove class method
-   * list classes
    * to string method
    *
    */

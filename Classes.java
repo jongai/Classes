@@ -12,7 +12,9 @@ public class Classes {
   private String className;
 
   // an ArrayList of students in the class, stores "Student" objects
-  private ArrayList<StudentGrades> studentgrades;
+  //private ArrayList<Student> students; 
+
+  private ArrayList<StudentGrades> sgrades;
 
   // the teacher of this class
   private Teacher teacher;
@@ -20,15 +22,16 @@ public class Classes {
   // no args constructor
   public Classes() {
     className = "";
-    studentgrades = new ArrayList<StudentGrades>();
+    sgrades = new ArrayList<StudentGrades>();
     teacher = new Teacher();
   }
 
   // constructor which initializes all instance variables
-  public Classes(String className, ArrayList<StudentGrades> sgrades, Teacher teacher) {
+  public Classes(String className, ArrayList<StudentGrades> sg, Teacher teacher, ArrayList<Student> students) {
     this.className = className;
-    this.studentgrades = sgrades;
+    this.sgrades = sg;
     this.teacher = teacher;
+    //this.students = students; //if studentgrade and student have same id i think we can use a method to get Students without storing additional objects likethis
   }
 
   // mutator(setter) method for changing the name of the class
@@ -43,7 +46,7 @@ public class Classes {
 
   // method for adding a studentgrade object to this class list
   public void add(StudentGrades s) {
-    studentgrades.add(s);
+    sgrades.add(s);
   }
 
   // method for removing a student object to this class list by inputting the
@@ -52,10 +55,10 @@ public class Classes {
     // loops through the list of students and finds the one with the
     // corresponding studentId and removes them
     int index = -1;
-    for (int j = 0; j < studentgrades.size(); j++) {
-      if (studentgrades.get(j).getId() == studentId) {
+    for (int j = 0; j < sgrades.size(); j++) {
+      if (sgrades.get(j).getId() == studentId) {
         index = j;
-        studentgrades.remove(j);
+        sgrades.remove(j);
       }
     }
 
@@ -70,8 +73,8 @@ public class Classes {
     // loops through the list of students and finds the one with the
     // corresponding studentId
     int index = -1;
-    for (int j = 0; j < studentgrades.size(); j++) {
-      if (studentgrades.get(j).getId() == studentId) {
+    for (int j = 0; j < sgrades.size(); j++) {
+      if (sgrades.get(j).getId() == studentId) {
         index = j;
       }
     }
@@ -80,5 +83,23 @@ public class Classes {
       return false;
     }
     return true;
+  }
+
+  //method that prints out the names of the students in the Student Array List 
+  public void printStudents(ArrayList<Student> slist)
+  {
+    for(int i = 0; i < sgrades.size(); i++)
+    {
+      int tempid = sgrades.get(i).getId();
+      Student tempstu = new Student();
+      for(Student stu: slist){
+        if(stu.getStudentId() == tempid){
+        tempstu = stu;
+        System.out.println(tempstu.getStudentName()); 
+        }
+      }
+      
+      
+    }
   }
 }

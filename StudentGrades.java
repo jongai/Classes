@@ -46,7 +46,6 @@ public class StudentGrades{
     return (c/d)*100;
   }
 
-
   public int getId(){
     return this.studentId;
   }
@@ -72,6 +71,7 @@ public class StudentGrades{
   }
 
 
+
   public void setGrade(int searchId, float pts, float totalpts){
     boolean found = false;
     for(Grade g: this.grades){
@@ -83,5 +83,4 @@ public class StudentGrades{
       //if(!found) System.out.println("assignment does not exist");
     }
   }
-
 }

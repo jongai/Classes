@@ -21,11 +21,14 @@ class Student //Drew Balaji
       yearGrad = initYearGrad;
       classesTaken = initClassesTaken;
       }
+      
+      
       //setters below
       public void setStudentId(int newStudentId)
       {
           studentId = newStudentId;
       }
+      
       public void setStudentName(String newStudentName)
       {
           studentName = newStudentName;
